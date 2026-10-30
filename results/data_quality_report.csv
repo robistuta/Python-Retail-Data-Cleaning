@@ -1,0 +1,8 @@
+Metric,Before Cleaning,After Cleaning
+Total Records,10000,9658
+Missing Customer IDs,2291,2246
+Missing Descriptions,42,0
+Cancelled Transaction Rows,100,0
+Invalid Quantities,130,0
+Invalid Prices,46,0
+Duplicate Records,196,0

@@ -1,0 +1,163 @@
+# Python Retail Data Cleaning and Business Insights Report
+
+## 1. Project Overview
+
+This project demonstrates data cleaning, data quality assessment,
+sales analysis, and visualization using Python.
+
+A sample of 10,000 transaction records from the UCI Online Retail
+dataset was analyzed using Pandas, NumPy, Matplotlib, and Seaborn.
+
+The objective was to transform raw transactional data into a clean,
+reliable dataset and generate useful sales insights.
+
+## 2. Dataset Information
+
+**Dataset:** Online Retail
+
+**Source:** UCI Machine Learning Repository
+
+**URL:** https://archive.ics.uci.edu/dataset/352/online+retail
+
+**Original dataset size:** Approximately 541,909 records.
+
+**Sample analyzed:** 10,000 transaction rows.
+
+**Period covered:** December 2010.
+
+## 3. Data Quality Assessment
+
+| Metric | Before Cleaning | After Cleaning |
+|---|---:|---:|
+| Total Records | 10,000 | 9,658 |
+| Missing Customer IDs | 2,291 | 2,246 |
+| Missing Descriptions | 42 | 0 |
+| Cancelled Transaction Rows | 100 | 0 |
+| Invalid Quantities | 130 | 0 |
+| Invalid Prices | 46 | 0 |
+| Duplicate Records | 196 | 0 |
+
+### Cleaning Results
+
+- Original records: 10,000
+- Cleaned records: 9,658
+- Records removed: 342
+- Percentage removed: 3.42%
+- Percentage retained: 96.58%
+
+## 4. Data Cleaning Process
+
+The dataset was cleaned using Python and Pandas.
+
+### Duplicate Removal
+
+Removed 196 duplicate records using:
+
+`drop_duplicates()`
+
+### Cancelled Transactions
+
+Removed 100 cancelled transaction rows by identifying invoice
+numbers beginning with the letter C.
+
+### Invalid Quantities
+
+Removed rows with zero or negative quantities.
+
+### Invalid Prices
+
+Removed rows with zero or negative unit prices.
+
+### Missing Descriptions
+
+Removed remaining rows with missing product descriptions.
+
+### Missing Customer IDs
+
+Retained 2,246 records with missing Customer IDs because they
+may represent valid sales transactions.
+
+### Sales Calculation
+
+Created a Total_Sales column using:
+
+`Total_Sales = Quantity * UnitPrice`
+
+## 5. Sales Performance
+
+| KPI | Result |
+|---|---:|
+| Total Sales | £183,529.13 |
+| Total Units Sold | 89,731 |
+| Unique Invoices | 424 |
+| Average Sales per Invoice | £432.85 |
+| Cleaned Records | 9,658 |
+
+## 6. Key Business Insights
+
+### United Kingdom Dominates Sales
+
+The United Kingdom generated £167,651.80 in sales.
+
+This represented approximately 91.35% of total sales.
+
+Other markets included Germany, Ireland, France, and Norway.
+
+### Highest-Revenue Product
+
+**REGENCY CAKESTAND 3 TIER**
+
+Sales generated: £7,717.95.
+
+### Highest-Volume Product
+
+**WORLD WAR 2 GLIDERS ASSTD DESIGNS**
+
+Units sold: 3,409.
+
+### Monthly Sales
+
+The sample contains transactions from December 2010.
+
+Total sales for this period: £183,529.13.
+
+Because the sample covers only one month, meaningful
+month-to-month comparisons were not possible.
+
+## 7. Data Visualizations
+
+Five charts were created using Matplotlib and Seaborn:
+
+1. Top 10 Products by Sales
+2. Top 10 Products by Quantity Sold
+3. Sales by Country
+4. Monthly Sales
+5. Data Quality Before and After Cleaning
+
+These charts are available in the `charts` folder.
+
+## 8. Project Limitations
+
+- Only 10,000 rows from the original dataset were analyzed.
+- The sample contains transactions from December 2010.
+- Cancelled transactions were excluded.
+- Sales represent positive transactions, not net revenue after returns.
+- Missing Customer IDs were retained.
+- Results should not be generalized to the full dataset.
+
+## 9. Conclusion
+
+This project demonstrates practical Python Data Analyst skills:
+
+- Pandas data cleaning
+- Duplicate detection
+- Missing-value analysis
+- Data validation
+- Data transformation
+- Sales performance analysis
+- Data visualization
+- CSV export
+- Reproducible analysis using Jupyter notebooks
+
+The project also demonstrates consistency between Excel and
+Python analysis of the same dataset.
